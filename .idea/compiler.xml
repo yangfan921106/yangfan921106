@@ -9,12 +9,14 @@
         <module name="Chapter6" />
         <module name="Chapter5" />
         <module name="Chapter7" />
+        <module name="yangfan921106" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="Chapter5" target="1.8" />
       <module name="Chapter6" target="1.5" />
       <module name="Chapter7" target="8" />
+      <module name="yangfan921106" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
