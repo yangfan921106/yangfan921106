@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Appium/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chapter6/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chapter_10/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chapter_11/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Junit44/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Junit55/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Junit55/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Rest-Assured/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Selenium/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TestNg/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mockdemo2/src/main/java" charset="UTF-8" />
+  </component>
+</project>

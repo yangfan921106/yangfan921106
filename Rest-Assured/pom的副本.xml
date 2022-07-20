@@ -1,0 +1,142 @@
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.incar</groupId>
+    <artifactId>app_auto_Test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- 设置编码格式防止allure報表乱码 -->
+    <properties>
+        <aspectj.version>1.8.10</aspectj.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+    </properties>
+
+    <!-- dependencies标签：里面是所有需要的依赖 -->
+
+    <dependencies>
+
+        <!-- java-client依赖 -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>6.1.0</version>
+        </dependency>
+
+        <!-- testng依赖 测试套件  <version>6.11</version>  <scope>compile</scope>
+        版本有问题，最好使用6.11不然用例可能会被忽略:Test ignored
+        其次就是如果提示程序包org.testng.annotations不存在，把<scope>标签里面的test换成compile
+        -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.11</version>
+        </dependency>
+
+        <!-- dom4j依赖 解析Xml -->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+        <!-- log4j依赖 info日志 -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <!-- allure報表依赖 如果是mvn test构建的话是在target里面的allure-results-->
+        <!-- allure報表查看 在F:\TEST\Item\autoTest\autoTest（项目的根路径）会有一个allure-results文件夹
+        0.先下载allure的压缩包最好是和依赖的版本统一，解压后配置全局变量
+        1.在同级目录输入cmd进入dos窗口
+        2.在dos窗口运行命令行加载报告，然后会自动开一个页面服务显示报表：allure serve allure-results(这个就是刚才的文件夹)
+        3.是否可以把局域网的报表映射到外网
+         -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.12.1</version>
+        </dependency>
+
+        <!-- alibaba  fastjson依赖解析格式-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.62</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <!-- 指定项目构建方式，用来执行testng.xml 不然只能通过鼠标右键运行，可配合持续化集成 -->
+    <build>
+        <plugins>
+            <!--  提示：Element 'configuration' cannot have character [children], because the type's
+            就是后面<mainClass>java.util.AppiumServerUtil</mainClass>这个标签前后有空白字符，我在网上复制过来就被坑了
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                               <mainClass>java.util.WriterXmlUtil</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            -->
+            <!-- maven-compiler-plugin插件：指定jdk的版本，有时候External Libraries里面的jdk版本会变化成1.5 或jdk11 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <!-- maven-surefire-plugin插件：指定构建方式，用来执行testng.xml 不然只能通过鼠标右键运行 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+                <configuration>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng2.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <!--生成allure-result的目录-->
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>./target/allure-results</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

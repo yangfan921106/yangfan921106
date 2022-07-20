@@ -7,7 +7,8 @@
     <!--
     methods级别：所有用例都可以在不同的线程下去执行
     thread-count：代表了最大并发线程数
-    
+    xml文件配置这种方法不能指定线程池，只有方法上才可以指定线程池
+
     -->
     <test name = "demo1">
         <classes>

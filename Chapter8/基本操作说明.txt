@@ -1,0 +1,31 @@
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startupGet.json
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startup1.json
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startupPost.json
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startUpWithCookies.json
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startupWithHeader.json
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startupWithRedirect.json
+
+startupWithRedirect
+
+
+
+带参数的在浏览器访问：
+http://localhost:8888/getwithpara?name=xiaohua&age=18
+不带参数的在浏览器访问：
+http://localhost:8888/getdemo
+第一个demo：
+http://localhost:8888/demo
+
+在terminal进行敲命令
+
+post操作的需要去postman或者jmeter里面去执行哦
+post请求传参数是用的forms
+get请求传参数是用的queries
+
+携带cookies信息才能访问的请求：
+在postman里面需要添加cookie信息才行
+
+
+
+
+

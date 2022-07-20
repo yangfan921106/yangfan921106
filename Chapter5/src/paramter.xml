@@ -5,6 +5,8 @@
         <classes>
             <parameter name ="name" value = "zhangsan"/>
             <parameter name = "age" value = "10"/>
+            <parameter name ="name1" value = "lisi"/>
+            <parameter name = "age1" value = "10"/>
             <class name = "com.course.testng.paramtertest.ParamterTest"/>
         </classes>
 

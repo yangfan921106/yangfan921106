@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "group">
+
+
+    <test name= "testgroups">
+        <packages>
+            <package name = "KuoHai.Package01"/>
+            <package name = "KuoHai.Package02"/>
+
+        </packages>
+    </test>
+</suite>

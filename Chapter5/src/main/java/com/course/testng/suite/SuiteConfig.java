@@ -1,7 +1,9 @@
-package suite;
+package com.course.testng.suite;
 
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 public class SuiteConfig {
 
@@ -13,6 +15,16 @@ public class SuiteConfig {
     @AfterSuite
     public void afterSuite(){
         System.out.println("after suite运行啦");
+    }
+
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("beforetest");
+    }
+
+    @AfterTest
+    public void afterTest(){
+        System.out.println("aftertest");
     }
 
 }

@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Appium/Appium.iml" filepath="$PROJECT_DIR$/Appium/Appium.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter5/Chapter5.iml" filepath="$PROJECT_DIR$/Chapter5/Chapter5.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter6/Chapter6.iml" filepath="$PROJECT_DIR$/Chapter6/Chapter6.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter7/Chapter7.iml" filepath="$PROJECT_DIR$/Chapter7/Chapter7.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/yangfan921106.iml" filepath="$PROJECT_DIR$/.idea/yangfan921106.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_10/Chapter_10.iml" filepath="$PROJECT_DIR$/Chapter_10/Chapter_10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter_11/Chapter_11.iml" filepath="$PROJECT_DIR$/Chapter_11/Chapter_11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaTest/JavaTest.iml" filepath="$PROJECT_DIR$/JavaTest/JavaTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Junit44/Junit44.iml" filepath="$PROJECT_DIR$/Junit44/Junit44.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Junit55/Junit55.iml" filepath="$PROJECT_DIR$/Junit55/Junit55.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rest-Assured/Rest-Assured.iml" filepath="$PROJECT_DIR$/Rest-Assured/Rest-Assured.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Selenium/Selenium.iml" filepath="$PROJECT_DIR$/Selenium/Selenium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestNg/TestNg.iml" filepath="$PROJECT_DIR$/TestNg/TestNg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mockdemo2/mockdemo2.iml" filepath="$PROJECT_DIR$/mockdemo2/mockdemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yangfan921106.iml" filepath="$PROJECT_DIR$/yangfan921106.iml" />
     </modules>
   </component>
 </project>

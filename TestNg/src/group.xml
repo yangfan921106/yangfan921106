@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "group">
+
+
+    <test name= "onlyrunsome">
+        <groups>
+            <define name = "冒烟测试">
+                <include name = "group01"/>
+            </define>
+
+            <define name = "系统测试">
+                <include name = "group02"/>
+                <include name = "group03"/>
+
+            </define>
+
+            <define name = "回归测试">
+                <include name = "group03"/>
+            </define>
+
+            <run>
+                <include name = "系统测试"/>
+            </run>
+        </groups>
+        <classes>
+            <class name= "KuoHai.Package01.Class01Test"/>
+        </classes>
+    </test>
+</suite>

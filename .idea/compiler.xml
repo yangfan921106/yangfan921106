@@ -2,21 +2,40 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mockdemo2" />
+        <module name="Rest-Assured" />
         <module name="Chapter6" />
-        <module name="Chapter5" />
         <module name="Chapter7" />
-        <module name="yangfan921106" />
+        <module name="TestNg" />
+        <module name="Chapter_10" />
+        <module name="Appium" />
+        <module name="JavaTest" />
+        <module name="Chapter_11" />
+        <module name="Selenium" />
+        <module name="Junit44" />
+        <module name="Junit55" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="Appium" target="8" />
       <module name="Chapter5" target="1.8" />
-      <module name="Chapter6" target="1.5" />
+      <module name="Chapter6" target="1.6" />
       <module name="Chapter7" target="8" />
-      <module name="yangfan921106" target="1.5" />
+      <module name="Chapter_10" target="1.8" />
+      <module name="Chapter_11" target="1.8" />
+      <module name="JavaTest" target="1.8" />
+      <module name="Junit44" target="1.8" />
+      <module name="Junit55" target="8" />
+      <module name="mockdemo2" target="7" />
+      <module name="Rest-Assured" target="8" />
+      <module name="Selenium" target="8" />
+      <module name="TestNg" target="1.8" />
+      <module name="yangfan921106" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
