@@ -1,14 +1,9 @@
 package BingAn;
 
 import io.restassured.response.Response;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.parallel.Execution;
-import utils.FakerUtils;
-
 
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.parallel.ExecutionMode.CONCURRENT;
 
 /**
  * @ClassName BingAnObject
